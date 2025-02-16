@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Image Transitions</title>
+
+	<style>
+		.image-container {
+    			text-align: center;
+   		 	margin-top: 50px;
+		}
+		
+		.image-container img {
+		    	width: 300px;
+    			height: 200px;
+    			border-radius: 10px;
+			transition: transform 2s ease-in-out;
+		}
+		
+		.image-container img:hover{
+			transform:scale(150%) rotate(-360deg);
+			opacity:50%;
+			filter: blur(5px) brightness(110%);
+		}
+</style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMG0Yhr4mHN_Fh9HXvpaetoU2e9GD_gBbxOZk56T_cRyvah66AuTNzAWtnaxGfQhOLqYs&usqp=CAU" 
+	alt="Sample Image">
+    </div>
+</body>
+</html>

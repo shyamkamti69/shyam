@@ -1,0 +1,51 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+
+
+/* Hamburger Icon */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Dropdown Menu - Initially Hidden */
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #444;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    display: none; /* Hide by default */
+    border-radius: 5px;
+}
+
+#menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#menu li:hover {
+    background: #555;
+}
+
+/* Show menu when active */
+#menu.show {
+    display: block;
+}

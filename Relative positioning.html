@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3 Equal Sections - Relative</title>
+    <style>
+        .container {
+            display: flex; /* Flexbox for easy layout */
+            height: 100vh; /* Full viewport height */
+        }
+	.section {
+		flex: 1; /* Divide into three equal parts */	
+		padding: 20px;
+		text-align: center;
+		font-size: 20px;
+	}
+	.section:nth-child(1){ 
+		background-color: lightblue;
+	}
+
+	.section:nth-child(2){ 
+		background-color: lighgreen;
+	}
+
+	.section:nth-child(3){ 
+		background-color: lightcoral;
+	}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="section"> Section1 </div>
+		<div class="section"> Section2 </div>
+		<div class="section"> Section3 </div>
+	</div>
+</body>
+</html>		
+
+
+	

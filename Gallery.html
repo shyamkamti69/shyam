@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <style>
+	/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Title */
+.gallery-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between images */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Image Container */
+.gallery-item {
+    border: 3px solid #333; /* Border around image & caption */
+    padding: 10px;
+    background: white;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Style */
+/* Image Style */
+.gallery-item img {
+    width: 100%; /* Fit inside container */
+    height: 300px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images fill the frame without distortion */
+    display: block;
+    border-bottom: 2px solid #333; /* Line between image & caption */
+}
+
+
+/* Caption */
+.caption {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Hover Effect */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* 1 image per row on mobile */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 class="gallery-title">Image Gallery</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/236x/48/63/a0/4863a0396a836a8807f80cb72d7a8812.jpg" alt="Image 1">
+            <p class="caption">Beautiful Portrait 1</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/f6/e2/8b/f6e28bbf19da40d30af43d05aff9cf7d.jpg" alt="Image 2">
+            <p class="caption">Beautiful Portrait 2</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/236x/ea/d6/6e/ead66efb1831ab512cf1386beee276ad.jpg" alt="Image 3">
+            <p class="caption">Beautiful Portrait 3</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/236x/2d/3f/aa/2d3faaec52fbda21fcdf790f8d3cbcbb.jpg" alt="Image 4">
+            <p class="caption">Beautiful Portrait 4</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/236x/e7/cf/72/e7cf7247554cf19fbdfc777bc869afb5.jpg" alt="Image 5">
+            <p class="caption">Beautiful Portrait 5</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/236x/12/61/be/1261beac880d6ecfe5efdf812af52624.jpg" alt="Image 6">
+            <p class="caption">Beautiful Portrait 6</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/236x/01/af/90/01af905680024464825b30eb0a4a7658.jpg" alt="Image 7">
+            <p class="caption">Beautiful Portrait 7</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/236x/3c/93/7b/3c937b7a1dc59c17f02505073c5fab9d.jpg" alt="Image 8">
+            <p class="caption">Beautiful Portrait 8</p>
+        </div>
+    </div>
+
+</body>
+</html>

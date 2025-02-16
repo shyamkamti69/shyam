@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title> Animation </title>
+<style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+	    animation: rotate3D 5s infinite;
+	    transform-style: preserve-3d;
+	    margin-left: 30%;
+	    }
+	@keyframes rotate3D {
+		0%{transform: rotateX(0deg) rotateY(0deg); }
+		100%{transform: rotateX(360deg) rotateY(-360deg); }
+}
+	 
+	
+</style>	
+</head>
+<body>
+    <div>
+        <img src="https://plus.unsplash.com/premium_photo-1673356713416-a8ed69af6f4a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVyc29uJTIwd2l0aCUyMGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D" 
+	width="400" height="300">
+    </div>
+</body>
+</html>

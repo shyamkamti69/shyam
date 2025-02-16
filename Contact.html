@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DinoStore/Home</title>
+	<style>
+		.bg-img{
+			height: 40vh;		
+			background-image: url("blockimg.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: bottom;
+			background-attachment: scroll;
+			opacity: 50%;
+	}
+
+		.border{
+			height: 20vh;
+			border-width: 5px;
+			border-style: dotted dashed solid groove;
+			border-color: red blue;
+			border-radius: 50px;
+			}
+		nav {
+   			 background: #333;
+    			 padding: 15px;
+    			 position: relative;
+			 z-index: 1000;
+			}
+
+		#menu{
+			    list-style: none;
+    			    padding: 0;
+    			    margin: 0;
+			    background: #444;
+			    width: 200px;
+    			    position: absolute;
+                            top: 50px;
+                            left: 10px;
+			    display: none; /* Hide by default */
+                            border-radius: 5px;
+			    z-index: 1002;
+			}
+
+	.menu-icon {
+    			font-size: 30px;
+    			color: white;
+    			cursor: pointer;
+    			text-align: left;
+			z-index: 1001;
+}
+
+	#menu li {
+    		padding: 10px;
+    		text-align: center;
+}
+
+	#menu li a {
+   			 text-decoration: none;
+    			color: white;
+    			display: block;
+}
+
+	#menu li:hover {
+    			background: #555;
+}
+
+	#menu.show {
+    		display: block;
+}
+
+</style>
+
+<script defer src="script.js"></script>   <!-- Link JavaScript file -->
+
+</head>
+
+<body style = "font-family:  Arial, sans-serif; margine :0px;">
+
+<header style = "display: flex; align-item: center; padding: 10px 20px; background-color: #43b59e; 
+color: #d7e856;">
+
+	<img src="img.png" alt="logo" style="height:50px; margine-right:15px; border-radius: 50%;">
+
+	<h1 style="margine: 0; font-size:1.5rem;"> DineoStores.com </h1>
+
+</header>
+
+<nav> 
+	<div class="menu-icon" onclick="toggleMenu()">
+		&#9776; <!-- Unicode for hamburger menu (three lines) -->
+	</div>
+	<ul id="menu">
+		<li> <a href="Home.html"> Home </a> </li>
+		<li> <a href="Gallery.html"> Gallery </a> </li>
+		<li> <a href="Contact.html"> Contact-Us</a> </li>
+	</ul>
+</nav>
+
+<main style="display: flex; flex-wrap: wrap; padding: 2rem; max-width: 1200px; margin: auto; gap: 2rem;">
+<section style="flex: 2; background-color: #43b59e; padding: 2rem; border-radius: 8px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+<h2>Send Us a Message</h2>
+
+<form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+
+<div>
+	<label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name:</label>
+	<input type="text" id="name" name="name" placeholder="Your full name" required
+	style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+
+<div>
+                    <label for="age" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="120" placeholder="Your age" required
+                           style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+<div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Gender:</label>
+		    
+			<input type="radio" id="male" name="gender" value="Male" required>
+			<label for="male" style="margin-right: 1rem;">Male</label>
+
+			<input type="radio" id="female" name="gender" value="Female">
+                    	<label for="female" style="margin-right: 1rem;">Female</label>
+                    
+                    	<input type="radio" id="other" name="gender" value="Other">
+                    	<label for="other">Other</label>
+                </div>
+
+<div>
+                    <label for="contact-date" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Preferred Contact Date:</label>
+                    <input type="date" id="contact-date" name="contact-date" required
+                           style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+ <div>
+                    <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..." required
+                              style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                </div>
+
+	<div style="text-align: center;">
+                    <button type="submit" style="background-color: #4CAF50; color: white; padding: 0.7rem 1.5rem; border: none; 
+											border-radius: 5px; cursor: pointer;">
+                        Submit
+                    </button>
+	</div>
+</form>
+        </section>
+
+<aside style="flex: 1; background-color: #43b59e; color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+	<h2>Our Location</h2>
+<address>
+DinoStores.com<br>
+123 Festival Avenue<br>
+Ahmedabad, Gujarat, India<br>
+PIN: 380001
+Phone: <a href="tel:+919876543210"> +91 98765 43210 </a><br>
+Email: <a href="mailto:info@dinostores.com">info@dinostores.com</a>
+</address>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.9982166075592!2d69.8154769743731!3d23.18962951007511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950e7cd8553eadf%3A0x68781661a791e814!2sKutch%20Eco%20Adventure%20Camp!5e1!3m2!1sen!2sin!4v1736328297722!5m2!1sen!2sin" 
+width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+</aside>
+
+</main>
+</body>
+</html>

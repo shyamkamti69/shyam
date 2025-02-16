@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Circular Animation</title>
+
+	<style>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Default Image Style */
+.animated-img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Circular Animation on Click */
+@keyframes circleMove {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(100px, 100px) rotate(90deg); }
+    50% { transform: translate(0px, 200px) rotate(180deg); }
+    75% { transform: translate(-100px, 100px) rotate(270deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Adding Animation */
+.animate {
+    animation: circleMove 2s ease-in-out infinite;
+}
+<style>
+
+		
+
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://i.insider.com/56d47f6cdd089554178b464a?width=1200&format=jpeg" alt="Moving Image" class="animated-img" onclick="startAnimation()">
+    </div>
+
+    <script>
+        function startAnimation() {
+            document.querySelector(".animated-img").classList.add("animate");
+        }
+    </script>
+
+</body>
+</html>

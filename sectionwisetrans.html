@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Equal Sections with Hover Effect</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        /* Container for three sections */
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh; /* 50% of screen height */
+        }
+
+        /* Individual Sections */
+        .section {
+            flex: 1; /* Equal width */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7); /* 70% transparent overlay */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section a:hover {
+            transform: scale(1.1); /* Text zoom on hover */
+        }
+
+        .section1:hover {
+            transform: scale(1.1); /* Image zoom on hover */
+        }
+
+        .section2:hover {
+            transform: scale(1.1); /* Image zoom on hover */
+        }
+
+        .section3:hover {
+            transform: scale(1.1); /* Image zoom on hover */
+        }
+
+        /* Background Images */
+        .section1 {
+            background: url('https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat top center/cover; 
+        }
+        .section2 {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfBzfULCgvwlvO5kiilV9P8jzsgIhtli50Qw&s') no-repeat top center/cover;
+        }
+        .section3 {
+            background: url('https://images.pexels.com/photos/1620788/pexels-photo-1620788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat top center/cover;
+        }
+
+        /* Content Sections Below */
+        .content {
+            padding: 50px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Section with Three Equal Divisions -->
+    <div class="container">
+        <div class="section section1">
+            <a href="#about">About Us</a>
+        </div>
+        <div class="section section2">
+            <a href="#moto">Our Moto</a>
+        </div>
+        <div class="section section3">
+            <a href="#testimonials">Testimonials</a>
+        </div>
+    </div>
+
+    <!-- Content Sections Below -->
+    <div id="about" class="content">
+        <h2>About Us</h2>
+        <p>We are a team dedicated to providing the best experience for our users.</p>
+    </div>
+
+    <div id="moto" class="content">
+        <h2>Our Moto</h2>
+        <p>To inspire and create a positive impact through our services and values.</p>
+    </div>
+
+    <div id="testimonials" class="content">
+        <h2>Testimonials</h2>
+        <p>See what our customers have to say about their amazing experiences with us.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trippin' Clone</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+nav.scrolled {
+    background: black;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?nature,adventure') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    background: #ff6600;
+    border-radius: 5px;
+}
+
+/* Content Sections */
+.content {
+    padding: 100px 20px;
+    background: black;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
+.content:nth-child(even) {
+    background: #222;
+}
+
+/* Fade-in Effect on Scroll */
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+    
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <h1>Trippin'</h1>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Explore the Unseen</h1>
+            <p>Adventure, Nature & Serenity</p>
+            <a href="#explore" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content" id="explore">
+        <h2>Discover Hidden Paradises</h2>
+        <p>Experience breathtaking landscapes, serene beaches, and thrilling adventures.</p>
+    </section>
+
+    <section class="content">
+        <h2>Curated Travel Experiences</h2>
+        <p>Join our exclusive trips designed for wanderlust souls.</p>
+    </section>
+
+    <section class="content">
+        <h2>Book Your Next Adventure</h2>
+        <p>Find the best trip plans, accommodations, and guides.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
